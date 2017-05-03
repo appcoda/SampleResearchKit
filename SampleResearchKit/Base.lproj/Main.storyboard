@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleResearchKit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +21,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResearchKit Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRF-Wx-Vix">
+                                <rect key="frame" x="102" y="42" width="170" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtK-YM-1eO">
+                                <rect key="frame" x="39" y="318" width="58" height="30"/>
+                                <state key="normal" title="Consent"/>
+                                <connections>
+                                    <action selector="consentClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnk-mg-8yZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xv2-ku-m0R">
+                                <rect key="frame" x="163" y="318" width="48" height="30"/>
+                                <state key="normal" title="Survey"/>
+                                <connections>
+                                    <action selector="surveyClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ouc-sY-EnZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-cL-kwH">
+                                <rect key="frame" x="280" y="318" width="79" height="30"/>
+                                <state key="normal" title="Active Task"/>
+                                <connections>
+                                    <action selector="activeTaskClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7K-sD-zif"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xv2-ku-m0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="03o-gH-JFf"/>
+                            <constraint firstItem="xv2-ku-m0R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ARA-Be-BqM"/>
+                            <constraint firstItem="GRF-Wx-Vix" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="Ewk-IY-bfd"/>
+                            <constraint firstItem="GRF-Wx-Vix" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F7D-Hy-pLH"/>
+                            <constraint firstItem="KtK-YM-1eO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GPN-8O-5pk"/>
+                            <constraint firstItem="zZr-cL-kwH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZwD-TW-21f"/>
+                            <constraint firstItem="KtK-YM-1eO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="ae1-OI-Vh7"/>
+                            <constraint firstItem="zZr-cL-kwH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="n1o-3g-kpk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

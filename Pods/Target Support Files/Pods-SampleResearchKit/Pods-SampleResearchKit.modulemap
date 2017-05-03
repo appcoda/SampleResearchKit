@@ -1,0 +1,6 @@
+framework module Pods_SampleResearchKit {
+  umbrella header "Pods-SampleResearchKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
